@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CardQR</string>
+    <string name="card_qr">Card QR Business</string>
+    <string name="name_card">Isabela Card</string>
+    <string name="department_card">Dev mobile Card</string>
+    <string name="company_card">Nine Plus Solution</string>
+</resources>
