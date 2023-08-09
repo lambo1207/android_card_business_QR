@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CardZap</string>
+    <string name="intro_instruction">By continuing to the app you agree to out <b><u>Term and Conditions</u></b>, <b><u>Privacy policy</u></b></string>
 </resources>
