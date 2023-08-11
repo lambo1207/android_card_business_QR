@@ -132,6 +132,16 @@
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+            
+            <com.google.android.gms.common.SignInButton
+                style="@android:style/Widget.Button"
+                android:id="@+id/btnSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/lavender_border"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

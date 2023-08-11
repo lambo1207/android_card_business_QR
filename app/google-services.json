@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "953505047628",
+    "project_id": "cardzap-30b9b",
+    "storage_bucket": "cardzap-30b9b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953505047628:android:df2acc780a0bc32d4780e9",
+        "android_client_info": {
+          "package_name": "com.example.cardzap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953505047628-66grujj7qqjjrb88h34sfssh95dovm9j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDs3nBXTvTyees4VLmcCEqC6C2mhOWq8_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953505047628-66grujj7qqjjrb88h34sfssh95dovm9j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
