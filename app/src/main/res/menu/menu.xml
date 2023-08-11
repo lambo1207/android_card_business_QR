@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/ic_MyeCard"
+        android:icon="@drawable/baseline_credit_card_24"
+        android:title="My eCards"/>
+
+    <item android:id="@+id/ic_Contacts"
+        android:icon="@drawable/baseline_contacts_24"
+        android:title="Contacts"/>
+</menu>
