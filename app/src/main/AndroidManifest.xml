@@ -13,19 +13,19 @@
         android:theme="@style/Theme.CardZap"
         tools:targetApi="31">
         <activity
-            android:name=".SignupActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
+            android:name=".Pages.SignupActivity"
             android:exported="false" />
         <activity
             android:name=".Pages.SettingPage"
             android:exported="false" />
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".Pages.IntroPage"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Pages.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
