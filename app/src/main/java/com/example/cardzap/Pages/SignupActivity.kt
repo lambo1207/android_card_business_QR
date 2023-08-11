@@ -1,7 +1,8 @@
-package com.example.cardzap
+package com.example.cardzap.Pages
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.cardzap.R
 
 class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
