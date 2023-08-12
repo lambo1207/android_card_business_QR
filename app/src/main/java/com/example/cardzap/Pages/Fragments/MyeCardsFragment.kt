@@ -1,11 +1,18 @@
 package com.example.cardzap.Pages.Fragments
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.cardzap.R
+import com.example.cardzap.adapters.CardAdapter
+import com.example.cardzap.models.Card
+import kotlin.random.Random
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,6 +29,11 @@ class MyeCardsFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var ivScan: ImageView
+    private lateinit var ivNewCard: ImageView
+    private lateinit var rvCards: RecyclerView
+    private var listCard: MutableList<Card> = ArrayList()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -35,7 +47,64 @@ class MyeCardsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mye_cards, container, false)
+        val view = inflater.inflate(R.layout.fragment_mye_cards, container, false)
+
+        ivScan = view.findViewById(R.id.iv_scan_qr)
+        ivNewCard = view.findViewById(R.id.iv_new_card)
+        rvCards = view.findViewById(R.id.rv_card_qr)
+
+        ivScan.setOnClickListener {
+
+        }
+
+        ivNewCard.setOnClickListener{
+
+        }
+
+        val cardAdapter = context?.let { CardAdapter(it) }
+
+        val linearLayoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+        rvCards.layoutManager = linearLayoutManager
+
+        listCard = context?.let { getData(listCard, it) }!!
+        cardAdapter?.setData(listCard)
+        rvCards.adapter = cardAdapter
+        cardAdapter?.notifyDataSetChanged()
+
+        return view
+    }
+
+    private fun getData(itemList: MutableList<Card>, context: Context): MutableList<Card> {
+        val cardListGet: MutableList<Card> = ArrayList()
+
+        val random = Random
+        val imgInt = intArrayOf(
+            R.mipmap.img_ava01, R.mipmap.img_ava02, R.mipmap.img_ava03, R.mipmap.img_ava04,
+            R.mipmap.img_ava05, R.mipmap.img_ava06, R.mipmap.img_ava07
+        )
+        val imgString = arrayOfNulls<String>(imgInt.size)
+        var imgParse: String
+        for (i in imgInt.indices) {
+            imgParse = "android.resource://" + context.packageName + "/" + imgInt[i]
+            imgString[i] = imgParse
+        }
+        val nameCard = arrayOf(
+            "Iphone 11", "Iphone 12 Pro", "Iphone 13 ProMax", "Iphone 12 Mini",
+            "Iphone 13 Mini", "Iphone 11 ProMax", "Iphone 14", "Iphone 14 Pro", "Iphone 14 ProMax", "Iphone 15"
+        )
+        val email = arrayOf(
+            "Iphone 11", "Iphone 12 Pro", "Iphone 13 ProMax", "Iphone 12 Mini",
+            "Iphone 13 Mini", "Iphone 11 ProMax", "Iphone 14", "Iphone 14 Pro", "Iphone 14 ProMax", "Iphone 15"
+        )
+
+        for (i in 1..10) {
+            val card = Card(
+                i, nameCard[random.nextInt(nameCard.size)],
+                imgString[random.nextInt(imgString.size)]!!, email[random.nextInt(email.size)]
+            )
+            cardListGet.add(card)
+        }
+        return cardListGet
     }
 
     companion object {
