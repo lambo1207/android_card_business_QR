@@ -12,4 +12,27 @@
     <string name="company_card">Nine Plus Solution</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_your_link">Enter your link</string>
+    <string name="generate_qr_code">Generate QR Code</string>
+    <string name="new_card_zap">New CardZap</string>
+    <string name="save">Save</string>
+    <string name="enter_details">Enter Details:</string>
+    <string name="name">Name</string>
+    <string name="first_name">First name*</string>
+    <string name="last_name">Last Name*</string>
+    <string name="organization">Organization</string>
+    <string name="company">Company</string>
+    <string name="department">Department</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="website">Website</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="instagram">Instagram</string>
+    <string name="facebook">Facebook</string>
+    <string name="address">Address</string>
+    <string name="text">Text</string>
+    <string name="card">Card</string>
+    <string name="colors">Colors</string>
+    <string name="card_name_or_identifier">Card name or identifier</string>
+    <string name="card_details">Card Details:</string>
 </resources>
