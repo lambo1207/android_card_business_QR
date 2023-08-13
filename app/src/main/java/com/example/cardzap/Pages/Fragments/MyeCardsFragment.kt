@@ -1,6 +1,7 @@
 package com.example.cardzap.Pages.Fragments
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.cardzap.Pages.NewCard
 import com.example.cardzap.R
 import com.example.cardzap.adapters.CardAdapter
 import com.example.cardzap.models.Card
@@ -58,7 +60,8 @@ class MyeCardsFragment : Fragment() {
         }
 
         ivNewCard.setOnClickListener{
-
+            val newCardIntent = Intent(context, NewCard::class.java)
+            startActivity(newCardIntent)
         }
 
         val cardAdapter = context?.let { CardAdapter(it) }
