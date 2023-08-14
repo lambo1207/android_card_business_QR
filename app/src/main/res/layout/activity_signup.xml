@@ -97,7 +97,7 @@
                     android:id="@+id/signup_button"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="10dp"
                     android:backgroundTint="#FF000000"
                     android:text="Sign Up"
                     android:textColor="@color/white"
@@ -105,6 +105,16 @@
                     app:cornerRadius="30dp" />
 
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/loginRedirectText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Already an user? Login"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
