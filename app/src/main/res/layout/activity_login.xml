@@ -43,8 +43,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Login"
                 android:gravity="center"
+                android:text="Login"
                 android:textColor="#FF000000"
                 android:textSize="40sp"
                 android:textStyle="bold" />
@@ -117,8 +117,8 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="50dp"
-                android:textColor="#000000"
-                android:text="@string/forgot_password" />
+                android:text="@string/forgot_password"
+                android:textColor="#000000" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/login_btnLogin"
@@ -126,22 +126,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:background="@drawable/lavender_border"
                 android:text="@string/login"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-            
+
             <com.google.android.gms.common.SignInButton
-                style="@android:style/Widget.Button"
-                android:id="@+id/btnSignIn"
+                android:id="@+id/login_btnGoogleSignIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/lavender_border"
-                android:layout_margin="20dp"
                 android:layout_gravity="center"
-                />
+                android:layout_margin="5dp"
+                android:background="@drawable/lavender_border" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/signupRedirectText"
+                android:text="@string/not_yet_registered_signup"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:textSize="13sp"
+                android:textColor="@color/black"/>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
