@@ -8,6 +8,10 @@ android {
     namespace 'com.example.cardzap'
     compileSdk 33
 
+    viewBinding{
+        enabled = true
+    }
+
     defaultConfig {
         applicationId "com.example.cardzap"
         minSdk 24

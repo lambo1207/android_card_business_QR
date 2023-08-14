@@ -2,6 +2,7 @@ package com.example.cardzap.Pages.Fragments
 
 import android.content.Context
 import android.content.Intent
+import android.media.Image
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cardzap.Pages.NewCard
+import com.example.cardzap.Pages.SettingPage
 import com.example.cardzap.R
 import com.example.cardzap.adapters.CardAdapter
 import com.example.cardzap.models.Card
@@ -34,6 +36,7 @@ class MyeCardsFragment : Fragment() {
     private lateinit var ivScan: ImageView
     private lateinit var ivNewCard: ImageView
     private lateinit var rvCards: RecyclerView
+    private lateinit var ivSetting: ImageView
     private var listCard: MutableList<Card> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,9 +57,14 @@ class MyeCardsFragment : Fragment() {
         ivScan = view.findViewById(R.id.iv_scan_qr)
         ivNewCard = view.findViewById(R.id.iv_new_card)
         rvCards = view.findViewById(R.id.rv_card_qr)
+        ivSetting = view.findViewById(R.id.iv_setting)
 
         ivScan.setOnClickListener {
 
+        }
+
+        ivSetting.setOnClickListener {
+            startActivity(Intent(context,SettingPage::class.java))
         }
 
         ivNewCard.setOnClickListener{
