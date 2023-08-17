@@ -20,7 +20,7 @@
             android:name=".Pages.IntroPage"
             android:exported="false" />
         <activity
-            android:name=".Pages.SignupActivity"
+            android:name=".Pages.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".Pages.SettingPage"
@@ -32,7 +32,7 @@
             android:name=".Pages.NewCard"
             android:exported="false" />
         <activity
-            android:name=".Pages.HomePage"
+            android:name=".Pages.SignupActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,7 +41,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Pages.LoginActivity"
+            android:name=".Pages.HomePage"
             android:exported="true"></activity>
     </application>
 
