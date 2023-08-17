@@ -3,9 +3,11 @@ package com.example.cardzap.Pages
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cardzap.MainActivity
 import com.example.cardzap.R
+import com.example.cardzap.databinding.ActivityLoginBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -23,10 +25,32 @@ class LoginActivity : AppCompatActivity() {
 
     private var mGoogleSignInClient: GoogleSignInClient? = null
 
+    private lateinit var binding: ActivityLoginBinding
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        firebaseAuth = FirebaseAuth.getInstance()
+        binding.loginBtnLogin.setOnClickListener {
+            val email = binding.loginEmail.text.toString()
+            val pass = binding.loginPassword.text.toString()
+
+            if (email.isNotEmpty() && pass.isNotEmpty()){
+                    firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener{
+                        if (it.isSuccessful){
+                            startActivity(Intent(this, HomePage::class.java))
+                        } else{
+                            Toast.makeText(this, it.exception.toString(), Toast.LENGTH_LONG).show()
+                        }
+                    }
+
+            }else{
+                Toast.makeText(this, "No anyfield is empty !", Toast.LENGTH_LONG).show()
+            }
+        }
 
 
         //Configuration for google sign in
